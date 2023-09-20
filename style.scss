@@ -1,0 +1,213 @@
+body {
+    background: radial-gradient(grey, lightgrey, white);
+    font-size: 15px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        margin: 0% 2% 0% 2%;
+
+        .one-piece,
+        .bleach,
+        .darling,
+        .kny,
+        .drstone,
+        .naruto-shippuden,
+        .sword-art-online,
+        .danmachi,
+        .koe-no-katachi,
+        .kimi-no-nawa,
+        .black-clover,
+        .classroom-of-the-elite {
+            background: radial-gradient(grey, white, lightgrey);
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            border-radius: 10px;
+
+            .name {
+                font-size: 20px;
+            }
+
+            .author {
+                color: grey;
+            }
+
+            span {
+                margin: 10px 0 10px 0;
+                padding-left: 20px;
+            }
+
+            p {
+                width: 90%;
+                padding-left: 20px;
+            }
+
+            img {
+                border-radius: 10px;
+            }
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-left: 10px;
+                width: 100%;
+
+                button:nth-child(1),
+                button:nth-child(2),
+                button:nth-child(3) {
+                    background-color: lightgrey;
+                    border-radius: 10px;
+                    border: 0;
+                    color: white;
+                    padding: 5px;
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 410px) {
+    body {
+        background: radial-gradient(grey, lightgrey, white);
+        font-size: 20px;
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            grid-gap: 2rem;
+            margin: 0% 2% 0% 2%;
+
+            .one-piece,
+            .bleach,
+            .darling,
+            .kny,
+            .drstone,
+            .naruto-shippuden,
+            .sword-art-online,
+            .danmachi,
+            .koe-no-katachi,
+            .kimi-no-nawa,
+            .black-clover,
+            .classroom-of-the-elite {
+                background: radial-gradient(grey, white, lightgrey);
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                border-radius: 10px;
+
+                .name {
+                    font-size: 20px;
+                }
+
+                .author {
+                    color: grey;
+                }
+
+                img {
+                    border-radius: 10px;
+                }
+
+                .buttonDiv {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+
+                    button:nth-child(1),
+                    button:nth-child(2),
+                    button:nth-child(3) {
+                        background-color: lightgrey;
+                        border-radius: 10px;
+                        border: 0;
+                        color: white;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    body {
+        background: radial-gradient(grey, lightgrey, white);
+        font-size: 25px;
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+            margin: 0% 2% 0% 2%;
+
+            .one-piece,
+            .bleach,
+            .darling,
+            .kny,
+            .drstone,
+            .naruto-shippuden,
+            .sword-art-online,
+            .danmachi,
+            .koe-no-katachi,
+            .kimi-no-nawa,
+            .black-clover,
+            .classroom-of-the-elite {
+                background: radial-gradient(grey, white, lightgrey);
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                border-radius: 10px;
+
+                .name {
+                    font-size: 20px;
+                }
+
+                .author {
+                    color: grey;
+                }
+
+                h1 {
+                    margin: 10px 0 10px 0;
+                }
+
+                img {
+                    border-radius: 10px;
+                }
+
+                .buttonDiv {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    margin: 10px 0 10px 0;
+
+                    button:nth-child(1),
+                    button:nth-child(2),
+                    button:nth-child(3) {
+                        background-color: lightgrey;
+                        border-radius: 10px;
+                        border: 0;
+                        color: white;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
