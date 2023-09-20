@@ -29,6 +29,54 @@ body .container .classroom-of-the-elite {
   flex-direction: column;
   border-radius: 10px;
 }
+body .container .one-piece .malLogo,
+body .container .bleach .malLogo,
+body .container .darling .malLogo,
+body .container .kny .malLogo,
+body .container .drstone .malLogo,
+body .container .naruto-shippuden .malLogo,
+body .container .sword-art-online .malLogo,
+body .container .danmachi .malLogo,
+body .container .koe-no-katachi .malLogo,
+body .container .kimi-no-nawa .malLogo,
+body .container .black-clover .malLogo,
+body .container .classroom-of-the-elite .malLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin: auto;
+}
+body .container .one-piece .text,
+body .container .bleach .text,
+body .container .darling .text,
+body .container .kny .text,
+body .container .drstone .text,
+body .container .naruto-shippuden .text,
+body .container .sword-art-online .text,
+body .container .danmachi .text,
+body .container .koe-no-katachi .text,
+body .container .kimi-no-nawa .text,
+body .container .black-clover .text,
+body .container .classroom-of-the-elite .text {
+  height: 100%;
+}
+body .container .one-piece .lignDiv,
+body .container .bleach .lignDiv,
+body .container .darling .lignDiv,
+body .container .kny .lignDiv,
+body .container .drstone .lignDiv,
+body .container .naruto-shippuden .lignDiv,
+body .container .sword-art-online .lignDiv,
+body .container .danmachi .lignDiv,
+body .container .koe-no-katachi .lignDiv,
+body .container .kimi-no-nawa .lignDiv,
+body .container .black-clover .lignDiv,
+body .container .classroom-of-the-elite .lignDiv {
+  border: 0.1px solid black;
+  width: 90%;
+  margin: auto;
+}
 body .container .one-piece .name,
 body .container .bleach .name,
 body .container .darling .name,
@@ -194,6 +242,20 @@ body .container .classroom-of-the-elite .buttonDiv button:nth-child(3) {
     flex-direction: column;
     border-radius: 10px;
   }
+  body .container .one-piece .text,
+  body .container .bleach .text,
+  body .container .darling .text,
+  body .container .kny .text,
+  body .container .drstone .text,
+  body .container .naruto-shippuden .text,
+  body .container .sword-art-online .text,
+  body .container .danmachi .text,
+  body .container .koe-no-katachi .text,
+  body .container .kimi-no-nawa .text,
+  body .container .black-clover .text,
+  body .container .classroom-of-the-elite .text {
+    height: 100%;
+  }
   body .container .one-piece .name,
   body .container .bleach .name,
   body .container .darling .name,
@@ -326,6 +388,20 @@ body .container .classroom-of-the-elite .buttonDiv button:nth-child(3) {
     justify-content: flex-start;
     flex-direction: column;
     border-radius: 10px;
+  }
+  body .container .one-piece .text,
+  body .container .bleach .text,
+  body .container .darling .text,
+  body .container .kny .text,
+  body .container .drstone .text,
+  body .container .naruto-shippuden .text,
+  body .container .sword-art-online .text,
+  body .container .danmachi .text,
+  body .container .koe-no-katachi .text,
+  body .container .kimi-no-nawa .text,
+  body .container .black-clover .text,
+  body .container .classroom-of-the-elite .text {
+    height: 100%;
   }
   body .container .one-piece .name,
   body .container .bleach .name,

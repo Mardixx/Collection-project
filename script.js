@@ -201,6 +201,8 @@ for (let child of object) {
 
     let newP = document.createElement('p')
 
+    newP.classList.add('text')
+
     let description = document.createTextNode(child.description)
 
     newP.appendChild(description)
@@ -209,9 +211,19 @@ for (let child of object) {
 
     let bigChild = child.link;
 
+    let lignDiv = document.createElement('div')
+
+    lignDiv.classList.add('lignDiv')
+
+    newDiv.appendChild(lignDiv)
+
     let malDiv = document.createElement('div')
 
+    malDiv.classList.add('malLogo')
+
     let malSVG = document.createElement('img')
+
+    malSVG.classList.add('malSVG')
 
     let malA = document.createElement('a')
 
@@ -226,7 +238,7 @@ for (let child of object) {
 
         malSVG.src = 'imgs/myanimelist.svg'
 
-        malSVG.style.width = '25%'
+        malSVG.style.width = '100%'
 
         malDiv.appendChild(malA)
 

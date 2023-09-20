@@ -29,6 +29,24 @@ body {
             justify-content: flex-start;
             flex-direction: column;
             border-radius: 10px;
+            
+            .malLogo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                margin: auto;
+            }
+            
+            .text {
+                height: 100%;
+            }
+
+            .lignDiv {
+                border: 0.1px solid black;
+                width: 90%;
+                margin: auto;
+            }
 
             .name {
                 font-size: 20px;
@@ -107,6 +125,9 @@ body {
                 justify-content: flex-start;
                 flex-direction: column;
                 border-radius: 10px;
+                .text {
+                    height: 100%;
+                }
 
                 .name {
                     font-size: 20px;
@@ -174,6 +195,9 @@ body {
                 justify-content: flex-start;
                 flex-direction: column;
                 border-radius: 10px;
+                .text {
+                    height: 100%;
+                }
 
                 .name {
                     font-size: 20px;
