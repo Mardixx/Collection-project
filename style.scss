@@ -64,29 +64,34 @@ body {
                 .malLogo {
                     margin: auto;
                     width: 50%;
+                    height: 7rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
                     .malA {
                         margin: 25%;
                     }
 
                     .malSVG {
-                        width: 50%;
+                        width: 100%;
 
                     }
                 }
     
                 .deleteButton {
                     width: 50%;
-                   display: flex;
-                   justify-content: center;
-                   align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
                    .deleteDesign {
-                        width: 50%;
-                        padding: 10px;
                         border-radius: 10px;
                         border: none;
-                        background: radial-gradient(rgb(118, 189, 237), white, lightblue);
+                        background-color: transparent;
+                   }
+                   .sanjican {
+                    width: 70%;
                    }
                 }
             }

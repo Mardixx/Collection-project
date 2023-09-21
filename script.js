@@ -275,11 +275,15 @@ for (let child of object) {
 
     deleteButton.classList.add('deleteDesign')
 
-    let deleteText = document.createTextNode('Delete')
-
-    deleteButton.appendChild(deleteText)
-
     deleteDiv.appendChild(deleteButton)
+
+    let can3 = document.createElement('img')
+
+    can3.classList.add('sanjican')
+
+    can3.src = 'imgs/can.svg'
+
+    deleteButton.appendChild(can3)
 
     let deletelogoDiv = document.createElement('div')
 
@@ -382,8 +386,11 @@ document.querySelectorAll('.addButton').forEach(btn => btn.addEventListener("cli
     deleteDiv.classList.add('deleteButton');
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('deleteDesign');
-    deleteButton.textContent = 'Delete';
     deleteDiv.appendChild(deleteButton);
+    let can3 = document.createElement('img')
+    can3.classList.add('sanjican')
+    can3.src = 'imgs/can.svg'
+    deleteButton.appendChild(can3)
 
     // Create a div for delete button and MyAnimeList logo
     const deletelogoDiv = document.createElement('div');
