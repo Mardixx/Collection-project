@@ -188,6 +188,8 @@ for (let child of object) {
 
         let newButton = document.createElement('button')
 
+        newButton.classList.add('category')
+
         let buttonText = document.createTextNode(children)
 
         newButton.appendChild(buttonText)
@@ -301,10 +303,39 @@ for (let child of object) {
 }
 
 // Delete button
-
 document.querySelectorAll('.deleteButton').forEach(btn => btn.addEventListener("click", function(e){
-    this.parentNode.parentNode.remove();
+    this.parentNode.parentNode.style.transform = 'translateY(200px)'
+    setTimeout(() => {
+        this.parentNode.parentNode.style.transform = 'translateY(-5000px)'
+    }
+    , 200);
+    setTimeout(() => {
+        this.parentNode.parentNode.remove();
+    }
+    , 500);
 }));
+document.querySelectorAll('.category').forEach(btn => btn.addEventListener("click", function(e){
+    for (let child of object) {
+        let genre = child.genre
+        let text = this.innerText
+            for (let children of genre) {
+                if (text === children) {
+                    console.log(text);
+                    return
+                    
+                }
+                else {
+                    document.querySelector('.class').remove()
+                }
+                
+            }
+    }
+}));
+
+
+
+
+
 
 document.querySelectorAll('.addButton').forEach(btn => btn.addEventListener("click", function(e){
     // Prompt the user for card information
@@ -315,7 +346,7 @@ document.querySelectorAll('.addButton').forEach(btn => btn.addEventListener("cli
     const genre = genreString.split(',').map(item => item.trim());
     const image = prompt("Enter the image URL:");
     const date = prompt("Enter the release date:");
-    const description = prompt("Enter the description:");
+    const description = prompt("Enter the description (Wikipedia and MyAnimeList are Fine) :");
     const link = prompt("Enter the MyAnimeList link:");
 
     const collection = document.querySelector('.container');
@@ -404,7 +435,15 @@ document.querySelectorAll('.addButton').forEach(btn => btn.addEventListener("cli
     collection.appendChild(newDiv);
 
     // Add an event listener to the delete button
-    deleteButton.addEventListener("click", function(e) {
-        this.parentNode.parentNode.parentNode.remove();
-    });
+    document.querySelectorAll('.deleteButton').forEach(btn => btn.addEventListener("click", function(e){
+        this.parentNode.parentNode.style.transform = 'translateY(200px)'
+        setTimeout(() => {
+            this.parentNode.parentNode.style.transform = 'translateY(-5000px)'
+        }
+        , 200);
+        setTimeout(() => {
+            this.parentNode.parentNode.remove();
+        }
+        , 500);
+    }));
 }));
