@@ -1,7 +1,7 @@
 const object = [
     {
         // 1
-        divClass: 'one-piece',
+        divClass: 'class',
         animeName: 'One Piece',
         genre: ['Adventure', 'Fantasy'],
         author: 'Eichiro Oda',
@@ -12,7 +12,7 @@ const object = [
     },
     {
         // 2
-        divClass: 'bleach',
+        divClass: 'class',
         author: 'Tite Kubo',
         animeName: 'Bleach',
         genre: ['Adventure', 'Martial Arts', 'Supernatural'],
@@ -23,7 +23,7 @@ const object = [
     },
     {
         // 3
-        divClass: 'darling',
+        divClass: 'class',
         author: 'Kentaro Yabuki',
         animeName: 'Darling in the FranXX',
         genre: ['Mecha', 'Romatical Drama'],
@@ -34,7 +34,7 @@ const object = [
     },
     {
         // 4
-        divClass: 'kny',
+        divClass: 'class',
         author: 'Koyoharu Gotouge',
         animeName: 'Kimetsu no Yaiba',
         genre: ['Adventure', 'Martial Arts', 'Dark Fantasy'],
@@ -45,7 +45,7 @@ const object = [
     },
     {
         // 5
-        divClass: 'drstone',
+        divClass: 'class',
         author: 'Riichiro Inagak',
         animeName: 'Dr. Stone',
         genre: ['Adventure', 'Post Apocalyptic', 'Science Fiction'],
@@ -56,7 +56,7 @@ const object = [
     },
     {
         // 6
-        divClass: 'naruto-shippuden',
+        divClass: 'class',
         author: 'Masashi Kishimoto',
         animeName: 'Naruto: Shippuden',
         genre: ['Adventure', 'Fantasy Comedy', 'Martial Arts'],
@@ -67,7 +67,7 @@ const object = [
     },
     {
         // 7
-        divClass: 'sword-art-online',
+        divClass: 'class',
         author: 'Reki Kawahara',
         animeName: 'Sword Art Online',
         genre: ['Adventure', 'Science Fiction'],
@@ -78,7 +78,7 @@ const object = [
     },
     {
         // 8
-        divClass: 'danmachi',
+        divClass: 'class',
         author: 'Fujino Ōmori',
         animeName: 'Is It Wrong to Try to Pick Up Girls in a Dungeon?',
         genre: ['Fantasy', ' Sword and sorcery'],
@@ -89,7 +89,7 @@ const object = [
     },
     {
         // 9
-        divClass: 'koe-no-katachi',
+        divClass: 'class',
         author: 'Yoshitoki Ōima',
         animeName: 'Koe no Katachi',
         genre: ['Award winning', 'Drama'],
@@ -100,7 +100,7 @@ const object = [
     },
     {
         // 10
-        divClass: 'kimi-no-nawa',
+        divClass: 'class',
         author: 'Makoto Shinkai',
         animeName: 'Kimi no Nawa',
         genre: ['Award wining', 'Drama', 'Supernatural'],
@@ -111,7 +111,7 @@ const object = [
     },
     {
         // 11
-        divClass: 'black-clover',
+        divClass: 'class',
         author: 'Yūki Tabata',
         animeName: 'Black Clover',
         genre: ['Adventure', 'Fantasy'],
@@ -122,7 +122,7 @@ const object = [
     },
     {
         // 12
-        divClass: 'classroom-of-the-elite',
+        divClass: 'class',
         author: 'Shōgo Kinugasa',
         animeName: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e ',
         genre: ['Psychological thriller'],
@@ -133,6 +133,32 @@ const object = [
     },
     
 ]
+
+let presentation = document.querySelector('.presentation')
+
+let addButton = document.createElement('button')
+
+let addbuttonText = document.createTextNode('Add new Card')
+
+let pDiv = document.createElement('div')
+
+let header = document.querySelector('header')
+
+let h1 = document.querySelector('h1')
+
+pDiv.appendChild(h1)
+
+pDiv.classList.add('pDiv')
+
+addButton.appendChild(addbuttonText)
+
+addButton.classList.add('addButton')
+
+pDiv.appendChild(presentation)
+
+pDiv.appendChild(addButton)
+
+document.querySelector('body').insertBefore(pDiv, header)
 
 for (let child of object) {
 
@@ -227,10 +253,10 @@ for (let child of object) {
 
     let malA = document.createElement('a')
 
+    malA.classList.add('malA')
+
     for (let child of bigChild) {
         malA.href = child
-
-        console.log(child);
 
         malA.target = '_blank'
 
@@ -238,12 +264,140 @@ for (let child of object) {
 
         malSVG.src = 'imgs/myanimelist.svg'
 
-        malSVG.style.width = '100%'
-
         malDiv.appendChild(malA)
-
-        newDiv.appendChild(malDiv)
     }
+
+    let deleteDiv = document.createElement('div')
+
+    deleteDiv.classList.add('deleteButton')
+
+    let deleteButton = document.createElement('button')
+
+    deleteButton.classList.add('deleteDesign')
+
+    let deleteText = document.createTextNode('Delete')
+
+    deleteButton.appendChild(deleteText)
+
+    deleteDiv.appendChild(deleteButton)
+
+    let deletelogoDiv = document.createElement('div')
+
+    deletelogoDiv.classList.add('deleteLogoDiv')
+
+    deletelogoDiv.appendChild(deleteDiv)
+
+    deletelogoDiv.appendChild(deleteDiv)
+
+    deletelogoDiv.appendChild(malDiv)
+
+    newDiv.appendChild(deletelogoDiv)
 
     collection.appendChild(newDiv)
 }
+
+// Delete button
+
+document.querySelectorAll('.deleteButton').forEach(btn => btn.addEventListener("click", function(e){
+    this.parentNode.parentNode.remove();
+}));
+
+document.querySelectorAll('.addButton').forEach(btn => btn.addEventListener("click", function(e){
+    // Prompt the user for card information
+    const divClass = 'class';
+    const animeName = prompt("Enter the anime name:");
+    const author = prompt("Enter the author:");
+    const genreString = prompt("Enter genres (comma-separated):");
+    const genre = genreString.split(',').map(item => item.trim());
+    const image = prompt("Enter the image URL:");
+    const date = prompt("Enter the release date:");
+    const description = prompt("Enter the description:");
+    const link = prompt("Enter the MyAnimeList link:");
+
+    const collection = document.querySelector('.container');
+
+    // Create a new card div
+    const newDiv = document.createElement('div');
+    newDiv.classList.add(divClass);
+
+    // Create an image element
+    const newImg = document.createElement('img');
+    newImg.src = image;
+    newImg.style.width = '90%';
+    newImg.style.margin = '20px auto 10px auto';
+    newDiv.appendChild(newImg);
+
+    // Create a div for genre buttons
+    const buttonDiv = document.createElement('div');
+    buttonDiv.classList.add('buttonDiv');
+    for (const genreItem of genre) {
+        const newButton = document.createElement('button');
+        newButton.textContent = genreItem;
+        buttonDiv.appendChild(newButton);
+    }
+    newDiv.appendChild(buttonDiv);
+
+    // Create a span for anime name
+    const newspanName = document.createElement('span');
+    newspanName.classList.add('name');
+    newspanName.textContent = animeName;
+    newDiv.appendChild(newspanName);
+
+    // Create a span for author
+    const newspanAuthor = document.createElement('span');
+    newspanAuthor.classList.add('author');
+    newspanAuthor.textContent = author;
+    newDiv.appendChild(newspanAuthor);
+
+    // Create a span for date
+    const newspanDate = document.createElement('span');
+    newspanDate.textContent = date;
+    newDiv.appendChild(newspanDate);
+
+    // Create a paragraph for description
+    const newP = document.createElement('p');
+    newP.classList.add('text');
+    newP.textContent = description;
+    newDiv.appendChild(newP);
+
+    // Create a div for links (e.g., MyAnimeList)
+    const lignDiv = document.createElement('div');
+    lignDiv.classList.add('lignDiv');
+
+    // Create a div for MyAnimeList logo
+    const malDiv = document.createElement('div');
+    malDiv.classList.add('malLogo');
+    const malA = document.createElement('a');
+    malA.classList.add('malA');
+    malA.href = link;
+    malA.target = '_blank';
+    const malSVG = document.createElement('img');
+    malSVG.classList.add('malSVG');
+    malSVG.src = 'imgs/myanimelist.svg';
+    malA.appendChild(malSVG);
+    malDiv.appendChild(malA);
+
+    // Create a delete button
+    const deleteDiv = document.createElement('div');
+    deleteDiv.classList.add('deleteButton');
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('deleteDesign');
+    deleteButton.textContent = 'Delete';
+    deleteDiv.appendChild(deleteButton);
+
+    // Create a div for delete button and MyAnimeList logo
+    const deletelogoDiv = document.createElement('div');
+    deletelogoDiv.classList.add('deleteLogoDiv');
+    deletelogoDiv.appendChild(deleteDiv);
+    deletelogoDiv.appendChild(malDiv);
+
+    newDiv.appendChild(deletelogoDiv);
+
+    // Append the new card to the container
+    collection.appendChild(newDiv);
+
+    // Add an event listener to the delete button
+    deleteButton.addEventListener("click", function(e) {
+        this.parentNode.parentNode.parentNode.remove();
+    });
+}));
